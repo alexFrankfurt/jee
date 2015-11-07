@@ -5,7 +5,7 @@ import akka.event.Logging
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 
-object Main extends App with Routes{
+object Main extends App with Routes {
 
   println("OK")
   println(inner.html.some ())

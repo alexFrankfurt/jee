@@ -17,6 +17,8 @@ object Dependencies {
     typesafeAkkaRepo %% akkaActor % akkaActorVersion,
     typesafeAkkaRepo %% akkaHttpCore % akkaHttpVersion,
     typesafeAkkaRepo %% akkaHttp % akkaHttpVersion,
-    typesafeAkkaRepo %% akkaStream % akkaStreamVersion
+    typesafeAkkaRepo %% akkaStream % akkaStreamVersion,
+    "org.webjars.bower" % "polymer" % "1.2.1",
+    "org.webjars.bower" % "github-com-polymerelements-paper-button" % "1.0.7"
   )
 }
