@@ -1,0 +1,6 @@
+* text=auto
+
+*.scala   text
+*.styl    text
+*.coffee  text
+*.sbt     text
