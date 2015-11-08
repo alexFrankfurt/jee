@@ -5,9 +5,11 @@ name := "jee"
 
 scalaVersion := "2.11.7"
 
-scalaSource in Compile := baseDirectory.value / "src"
+sourceDirectory in Compile := baseDirectory.value / "src"
 
-javaSource in Compile := baseDirectory.value / "src"
+scalaSource in Compile := (sourceDirectory in Compile).value
+
+javaSource in Compile := (sourceDirectory in Compile).value
 
 mainClass := Some("com.alex.jee")
 

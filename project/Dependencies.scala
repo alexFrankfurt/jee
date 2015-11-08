@@ -11,13 +11,11 @@ object Dependencies {
   val akkaHttpCore = "akka-http-core-experimental"
   val akkaHttp = "akka-http-experimental"
 
-  val typesafeAkkaRepo = "com.typesafe.akka"
-
   val projectDependencies = Seq(
-    typesafeAkkaRepo %% akkaActor % akkaActorVersion,
-    typesafeAkkaRepo %% akkaHttpCore % akkaHttpVersion,
-    typesafeAkkaRepo %% akkaHttp % akkaHttpVersion,
-    typesafeAkkaRepo %% akkaStream % akkaStreamVersion,
+    "com.typesafe.akka" %% akkaActor % akkaActorVersion,
+    "com.typesafe.akka" %% akkaHttpCore % akkaHttpVersion,
+    "com.typesafe.akka" %% akkaHttp % akkaHttpVersion,
+    "com.typesafe.akka" %% akkaStream % akkaStreamVersion,
     "org.webjars.bower" % "polymer" % "1.2.1",
     "org.webjars.bower" % "github-com-polymerelements-paper-button" % "1.0.7"
   )
