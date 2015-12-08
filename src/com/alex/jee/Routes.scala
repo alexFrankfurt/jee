@@ -7,15 +7,24 @@ import MediaTypes._
 
 trait Routes {
 
-  val StyleDir = "target/web/stylus/main/style"
+  val AssetsDir = "target/web/public/main"
 
-  val ScriptDir = "target/web/coffeescript/main/script"
+  val LibDir = AssetsDir + "/lib"
 
-  val PolymerDir = "target/web/public/main/lib"
+  val StyleDir = AssetsDir + "/style"
+
+  val ScriptDir = AssetsDir + "/script"
+
+  val PolymerDir = LibDir + "/github-com-Polymer-polymer"
+
+  val WebcomponentsjsDir = LibDir + "/webcomponentsjs"
 
   val routes =
     (path("/") & get) {
       complete(html.index().toString())
+    } ~
+    path("hello.html") {
+      complete(HttpEntity(`text/html`, inner.html.hello().body))
     } ~
     path("hi") {
       get {
@@ -24,9 +33,6 @@ trait Routes {
         complete(HttpEntity(`text/html`, inner.html.some().body))
       }
     } ~
-    path("hello.html") {
-      complete(HttpEntity(`text/html`, inner.html.hello().body))
-    } ~
     pathPrefix("style") {
       getFromDirectory(StyleDir)
     } ~
@@ -34,16 +40,16 @@ trait Routes {
       getFromDirectory(ScriptDir)
     } ~
     pathPrefix("lib" / "polymer") {
-      getFromDirectory(PolymerDir + "/polymer")
+      getFromDirectory(PolymerDir)
     } ~
     pathPrefix("lib" / "webcomponentsjs") {
-      getFromDirectory(PolymerDir + "/webcomponentsjs")
+      getFromDirectory(WebcomponentsjsDir)
     } ~
     pathPrefix("lib") {
       extractUnmatchedPath { upath =>
         val prefix: String = upath.tail.head.toString
         mapRequestContext(_.mapUnmatchedPath(_.tail.tail)) {
-          getFromDirectory(PolymerDir + s"/github-com-polymerelements-$prefix")
+          getFromDirectory(LibDir + s"/github-com-PolymerElements-$prefix")
         }
       }
     }

@@ -16,7 +16,10 @@ object Dependencies {
     "com.typesafe.akka" %% akkaHttpCore % akkaHttpVersion,
     "com.typesafe.akka" %% akkaHttp % akkaHttpVersion,
     "com.typesafe.akka" %% akkaStream % akkaStreamVersion,
-    "org.webjars.bower" % "polymer" % "1.2.1",
-    "org.webjars.bower" % "github-com-polymerelements-paper-button" % "1.0.7"
+    "org.webjars.bower" % "github-com-PolymerElements-paper-button" % "1.0.3",
+    "org.webjars.bower" % "github-com-PolymerElements-paper-ripple" % "1.0.2",
+    "org.webjars.bower" % "github-com-PolymerElements-paper-material" % "1.0.4",
+  "org.webjars.bower" % "github-com-PolymerElements-paper-behaviors" % "1.0.10",
+    "org.webjars.bower" % "github-com-PolymerElements-paper-styles" % "1.0.13"
   )
 }
