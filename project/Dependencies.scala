@@ -2,6 +2,7 @@ import sbt._
 import Keys._
 
 object Dependencies {
+
   val akkaActorVersion = "2.4.0"
   val akkaHttpVersion = "1.0"
   val akkaStreamVersion = "1.0"
@@ -19,7 +20,7 @@ object Dependencies {
     "org.webjars.bower" % "github-com-PolymerElements-paper-button" % "1.0.3",
     "org.webjars.bower" % "github-com-PolymerElements-paper-ripple" % "1.0.2",
     "org.webjars.bower" % "github-com-PolymerElements-paper-material" % "1.0.4",
-  "org.webjars.bower" % "github-com-PolymerElements-paper-behaviors" % "1.0.10",
+    "org.webjars.bower" % "github-com-PolymerElements-paper-behaviors" % "1.0.10",
     "org.webjars.bower" % "github-com-PolymerElements-paper-styles" % "1.0.13"
   )
 }
