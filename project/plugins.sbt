@@ -3,7 +3,7 @@ resolvers += "Mavmav" at "http://mvnrepository.com/artifact/"
 resolvers += "Bintray" at "http://dl.bintray.com/typesafe/maven-releases/"
 
 
-addSbtPlugin("io.spray" % "sbt-revolver" % "0.7.2")
+addSbtPlugin("io.spray" % "sbt-revolver" % "0.8.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-twirl" % "1.1.1")
 
