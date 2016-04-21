@@ -3,7 +3,7 @@ import com.typesafe.sbt.stylus.Import._
 
 name := "jee"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 sourceDirectory in Compile := baseDirectory.value / "src"
 
