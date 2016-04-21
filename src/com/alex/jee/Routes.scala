@@ -24,13 +24,13 @@ trait Routes {
       complete(html.index().toString())
     } ~
     path("hello.html") {
-      complete(HttpEntity(`text/html`, inner.html.hello().body))
+      complete(inner.html.hello().body)
     } ~
     path("hi") {
       get {
         /** 1. Implement marshaller for [[play.twirl.api.HtmlFormat.Appendable]]
          */
-        complete(HttpEntity(`text/html`, inner.html.some().body))
+        complete(inner.html.some().body)
       }
     } ~
     pathPrefix("style") {

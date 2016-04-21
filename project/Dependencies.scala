@@ -3,9 +3,7 @@ import Keys._
 
 object Dependencies {
 
-  val akkaActorVersion = "2.4.0"
-  val akkaHttpVersion = "1.0"
-  val akkaStreamVersion = "1.0"
+  val akkaVersion = "2.4.4"
 
   val akkaActor = "akka-actor"
   val akkaStream = "akka-stream-experimental"
@@ -13,10 +11,10 @@ object Dependencies {
   val akkaHttp = "akka-http-experimental"
 
   val projectDependencies = Seq(
-    "com.typesafe.akka" %% akkaActor % akkaActorVersion,
-    "com.typesafe.akka" %% akkaHttpCore % akkaHttpVersion,
-    "com.typesafe.akka" %% akkaHttp % akkaHttpVersion,
-    "com.typesafe.akka" %% akkaStream % akkaStreamVersion,
+    "com.typesafe.akka" %% "akka-actor" % akkaVersion,
+    "com.typesafe.akka" %% "akka-http-core" % akkaVersion,
+    "com.typesafe.akka" %% "akka-http-experimental" % akkaVersion,
+    "com.typesafe.akka" %% "akka-stream" % akkaVersion,
     "org.webjars.bower" % "github-com-PolymerElements-paper-button" % "1.0.3",
     "org.webjars.bower" % "github-com-PolymerElements-paper-ripple" % "1.0.2",
     "org.webjars.bower" % "github-com-PolymerElements-paper-material" % "1.0.4",
