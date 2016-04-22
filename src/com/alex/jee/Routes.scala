@@ -2,10 +2,8 @@ package com.alex.jee
 
 import akka.http.scaladsl
 import scaladsl.server.Directives._
-import scaladsl.model._
-import MediaTypes._
 
-trait Routes { self: Main.type =>
+trait Routes extends Marshallers { self: Main.type =>
 
   val AssetsDir = "target/web/public/main"
 
@@ -22,16 +20,16 @@ trait Routes { self: Main.type =>
   val routes =
     (pathSingleSlash & get) {
       log.info("get to root path")
-      complete(html.index().toString())
+      complete(html.index())
     } ~
     path("hello.html") {
-      complete(inner.html.hello().body)
+      complete(inner.html.hello())
     } ~
     path("hi") {
       get {
         /** 1. Implement marshaller for [[play.twirl.api.HtmlFormat.Appendable]]
          */
-        complete(inner.html.some().body)
+        complete(inner.html.some())
       }
     } ~
     pathPrefix("style") {
