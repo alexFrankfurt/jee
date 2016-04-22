@@ -5,7 +5,7 @@ import scaladsl.server.Directives._
 import scaladsl.model._
 import MediaTypes._
 
-trait Routes {
+trait Routes { self: Main.type =>
 
   val AssetsDir = "target/web/public/main"
 
@@ -20,7 +20,8 @@ trait Routes {
   val WebcomponentsjsDir = LibDir + "/webcomponentsjs"
 
   val routes =
-    (path("/") & get) {
+    (pathSingleSlash & get) {
+      log.info("get to root path")
       complete(html.index().toString())
     } ~
     path("hello.html") {
