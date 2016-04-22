@@ -7,9 +7,6 @@ import akka.stream.ActorMaterializer
 
 object Main extends App with Routes {
 
-  println("OK")
-  println(inner.html.some ())
-
   implicit val system = ActorSystem("jee")
   val log = Logging(system, this.getClass)
   implicit val materializer = ActorMaterializer()
