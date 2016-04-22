@@ -5,13 +5,13 @@ import scaladsl.server.Directives._
 
 trait Routes extends Marshallers { self: Main.type =>
 
-  val AssetsDir = "target/web/public/main"
+  val AssetsDir = "target/web"
 
-  val LibDir = AssetsDir + "/lib"
+  val LibDir = AssetsDir + "/web-modules/main/webjars/lib"
 
-  val StyleDir = AssetsDir + "/style"
+  val StyleDir = AssetsDir + "/stylus/main/style"
 
-  val ScriptDir = AssetsDir + "/script"
+  val ScriptDir = AssetsDir + "/coffeescript/main/script"
 
   val PolymerDir = LibDir + "/github-com-Polymer-polymer"
 
