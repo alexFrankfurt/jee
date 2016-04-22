@@ -8,8 +8,8 @@ import akka.stream.ActorMaterializer
 object Main extends App with Routes {
 
   implicit val system = ActorSystem("jee")
-  val log = Logging(system, this.getClass)
   implicit val materializer = ActorMaterializer()
+  val log = Logging(system, this.getClass)
 
   Http().bindAndHandle(routes, "localhost", 8080)
 }
